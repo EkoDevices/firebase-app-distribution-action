@@ -91,9 +91,6 @@ runs:
     - name: Run firebase appdistribution:distribute 
       shell: bash
       run: |
-            - name: Run firebase appdistribution:distribute 
-      shell: bash
-      run: |
         output=$($(which firebase) appdistribution:distribute \
           --app ${{ inputs.app }} \
           --token "${{ inputs.token }}" \
