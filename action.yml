@@ -105,9 +105,9 @@ runs:
 
         echo "$output"
 
-        # Extract the share_url from the output
-        share_url=$(echo "$output" | grep -oP 'https://appdistribution\.firebase\.google\.com/testerapps/[^\s]+')
-        echo "Share URL: $share_url"
+        # Extract the share_url from the output in a portable way
+          share_url=$(echo "$output" | grep -Eo 'https://appdistribution\.firebase\.google\.com/testerapps/[^[:space:]]+')
+          echo "Share URL: $share_url"
         
         if [ -n "$share_url" ]; then
           echo "SHARE_URL=$share_url" >> $GITHUB_ENV
