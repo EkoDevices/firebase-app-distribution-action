@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: echo '${{ secrets.FIREBASE_CREDENTIALS }}' > ${{ secrets.FIREBASE_CREDENTIALS_FILE }}
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -55,7 +55,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '16.x'
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -69,7 +69,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18.x'
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk
@@ -83,7 +83,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '21.x'
-      - name: Run nickwph/firebase-app-distribution-action@v1
+      - name: Run RamiAsia/firebase-app-distribution-action@v1
         uses: ./
         with:
           file: .github/workflows/assets/app-debug.apk

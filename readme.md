@@ -3,7 +3,7 @@
 A very optimized version of Github Action that does the job fast.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Main](https://github.com/nickwph/firebase-app-distribution-action/actions/workflows/main.yml/badge.svg)](https://github.com/nickwph/firebase-app-distribution-action/actions/workflows/main.yml)
+[![Main](https://github.com/RamiAsia/firebase-app-distribution-action/actions/workflows/main.yml/badge.svg)](https://github.com/RamiAsia/firebase-app-distribution-action/actions/workflows/main.yml)
 
 ## Super fast prepation and upload time - ~17s
 
@@ -29,7 +29,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: nickwph/firebase-app-distribution-action@v1
+      - uses: RamiAsia/firebase-app-distribution-action@v1
         with:
           file: app-debug.apk
           app: ${{ secrets.FIREBASE_APP_ID }}
