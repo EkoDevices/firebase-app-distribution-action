@@ -1,8 +1,8 @@
-name: Distribute To Firebase App Distribution
-description: Upload artifacts to Firebase App Distribution within seconds
-author: Nicholas Wong
+name: Upload Binary To Firebase App Distribution
+description: Upload binary to Firebase App Distribution
+author: Rami Asia
 branding:
-  color: blue
+  color: orange
   icon: cloud-drizzle
 inputs:
   file:
