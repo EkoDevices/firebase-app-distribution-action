@@ -91,7 +91,10 @@ runs:
     - name: Run firebase appdistribution:distribute 
       shell: bash
       run: |
-        $(which firebase) appdistribution:distribute \
+            - name: Run firebase appdistribution:distribute 
+      shell: bash
+      run: |
+        output=$($(which firebase) appdistribution:distribute \
           --app ${{ inputs.app }} \
           --token "${{ inputs.token }}" \
           --release-notes "${{ inputs.release-notes }}" \
@@ -101,4 +104,15 @@ runs:
           --groups "${{ inputs.groups }}" \
           --groups-file "${{ inputs.groups-file }}" \
           $(${{ inputs.debug }} && echo "--debug" || echo "") \
-          ${{ inputs.file }}
+          ${{ inputs.file }})
+
+        echo "$output"
+
+        # Extract the share_url from the output
+        share_url=$(echo "$output" | grep -oP 'https://appdistribution\.firebase\.google\.com/testerapps/[^\s]+')
+        
+        if [ -n "$share_url" ]; then
+          echo "SHARE_URL=$share_url" >> $GITHUB_ENV
+        else
+          echo "No share URL found in the output."
+        fi
