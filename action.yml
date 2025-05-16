@@ -57,7 +57,7 @@ runs:
     - name: Checking node version
       id: node-version-above-18
       shell: bash
-      run: bash etc/compare-node-version.sh
+      run: ${{ github.workspace }}/etc/compare-node-version.sh
       continue-on-error: true
     - uses: actions/setup-node@v4
       if: ${{ steps.node-version-above-18.conclusion == 'failure' }}
