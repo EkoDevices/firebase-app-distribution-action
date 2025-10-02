@@ -85,7 +85,7 @@ runs:
         output=$($(which firebase) appdistribution:distribute \
           --app ${{ inputs.app }} \
           --token "${{ inputs.token }}" \
-          --release-notes "${{ inputs.release-notes }}" \
+          --release-notes ${{ toJSON(inputs.release-notes) }} \
           --release-notes-file "${{ inputs.release-notes-file }}" \
           --testers "${{ inputs.testers }}" \
           --testers-file "${{ inputs.testers-file }}" \
